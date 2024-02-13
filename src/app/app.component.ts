@@ -11,15 +11,16 @@ import { computedAsync } from 'ngxtension/computed-async';
   selector: 'app-root',
   imports: [RouterOutlet, HdWalletMultiButtonComponent],
   template: `
-    <header>
+    <header class="py-8 relative">
       <h1 class="text-5xl text-center mb-4">Hola, soy Bob.</h1>
       <div class="flex justify-center">
         <hd-wallet-multi-button></hd-wallet-multi-button>
       </div>
 
       @if (account()) {
-        <div>
-          <img src="" alt="">
+        <div class="absolute top-4 left-4 flex justify-center items-center gap-2  ">
+          <img [src]="account()?.info?.image" class="w-8 h-8 "/>
+          <p class="text-xl">{{account()?.balance}}</p>
         </div>
       }
 
