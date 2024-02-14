@@ -5,8 +5,8 @@ import { HeroSectionComponent } from './hero-section.component';
 @Component({
     selector: 'bob-home-page',
     template: `
-        <bob-hero-section></bob-hero-section>
-        <bob-features-section></bob-features-section>
+        <hero-section></hero-section>
+        <features-section></features-section>
     `,
     standalone: true,
     imports: [HeroSectionComponent, FeaturesSectionComponent]
